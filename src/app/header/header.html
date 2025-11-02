@@ -1,0 +1,80 @@
+<header class="header">
+  <div class="container">
+    <!-- Hamburger Menu Button (Far Left Corner) -->
+    <button mat-icon-button class="hamburger-menu-btn" (click)="toggleMobileMenu()" [class.active]="isMobileMenuOpen">
+      <i class="bi" [ngClass]="isMobileMenuOpen ? 'bi-x' : 'bi-list'"></i>
+    </button>
+    
+    <div class="logo">
+      <h1 class="velaga-logo">OnlyME</h1>
+    </div>
+    
+    <!-- Left Side Navigation Menu -->
+    <nav class="navigation" [class.mobile-open]="isMobileMenuOpen">
+      <ul class="nav-links">
+        <li>
+          <a href="#" routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeMobileMenu()" class="velaga-nav">
+            <i class="bi bi-house"></i>
+            <span>Home</span>
+          </a>
+        </li>
+      </ul>
+
+    </nav>
+    
+    <!-- Right Side Actions -->
+    <div class="right-actions">
+      <!-- Search Container -->
+      <div class="new-search-container">
+        <div class="search-box">
+          <input 
+            type="text" 
+            placeholder="Search..." 
+            [(ngModel)]="searchQuery"
+            (keydown)="onSearchKeydown($event)"
+            class="search-input">
+          <button 
+            type="button"
+            (click)="onSearch()" 
+            [disabled]="!searchQuery || !searchQuery.trim()"
+            class="search-btn">
+            <i class="bi bi-search"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Profile Dropdown -->
+      <div class="profile-container">
+        <button 
+          mat-icon-button 
+          class="profile-btn" 
+          [matMenuTriggerFor]="profileMenu" 
+          title="Profile">
+          <i class="bi bi-person-circle"></i>
+        </button>
+        
+        <!-- Profile Dropdown Menu -->
+        <mat-menu #profileMenu="matMenu" class="profile-menu" panelClass="profile-menu-panel">
+          <button mat-menu-item class="profile-menu-item">
+            <i class="bi bi-person"></i>
+            <span>Account</span>
+          </button>
+          <button mat-menu-item class="profile-menu-item">
+            <i class="bi bi-gear"></i>
+            <span>Settings</span>
+          </button>
+          <mat-divider></mat-divider>
+          <button mat-menu-item class="profile-menu-item logout-item" (click)="onLogout()">
+            <i class="bi bi-box-arrow-right"></i>
+            <span>Logout</span>
+          </button>
+        </mat-menu>
+      </div>
+    </div>
+    
+
+  </div>
+  
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-overlay" [class.active]="isMobileMenuOpen" (click)="closeMobileMenu()"></div>
+</header>

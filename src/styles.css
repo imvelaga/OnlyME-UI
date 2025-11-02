@@ -1,0 +1,410 @@
+/* Global styles for OnlyME UI */
+@import 'bootstrap-icons/font/bootstrap-icons.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  font-family: "Montserrat", "Helvetica Neue", "Arial", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+body {
+  background: 
+    url('/VelagaMainBackground.jpg') no-repeat center center fixed,
+    linear-gradient(135deg, rgba(0, 0, 0, 0.3) 0%, rgba(20, 20, 20, 0.2) 100%);
+  background-size: cover, cover;
+  background-attachment: fixed, fixed;
+  background-blend-mode: normal, multiply;
+  color: #ffa500;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Primary Glass effect overlay for the background image */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(135deg, rgba(10, 10, 10, 0.4) 0%, rgba(26, 26, 26, 0.3) 25%, rgba(13, 17, 23, 0.4) 75%, rgba(0, 0, 0, 0.5) 100%),
+    radial-gradient(circle at 15% 25%, rgba(255, 165, 0, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 85% 75%, rgba(255, 140, 0, 0.12) 0%, transparent 45%),
+    radial-gradient(circle at 45% 15%, rgba(255, 165, 0, 0.10) 0%, transparent 35%),
+    radial-gradient(circle at 25% 85%, rgba(255, 140, 0, 0.13) 0%, transparent 40%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  pointer-events: none;
+  z-index: -2;
+}
+
+/* Advanced Glass texture overlay */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    repeating-linear-gradient(
+      45deg,
+      transparent 0px,
+      rgba(255, 165, 0, 0.04) 1px,
+      transparent 2px,
+      transparent 8px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      transparent 0px,
+      rgba(255, 140, 0, 0.03) 1px,
+      transparent 2px,
+      transparent 12px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent 0px,
+      rgba(255, 165, 0, 0.02) 1px,
+      transparent 3px,
+      transparent 6px
+    );
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0.7;
+}
+
+app-root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Material Design customizations */
+.mat-mdc-button {
+  letter-spacing: 0.5px !important;
+}
+
+.mat-mdc-icon-button .mat-icon {
+  font-size: 24px !important;
+}
+
+/* Enhanced Glass background effects */
+html {
+  background: 
+    radial-gradient(circle at 25% 25%, rgba(255, 165, 0, 0.08) 0%, transparent 40%),
+    radial-gradient(circle at 75% 75%, rgba(255, 140, 0, 0.06) 0%, transparent 40%),
+    radial-gradient(circle at 50% 10%, rgba(255, 165, 0, 0.05) 0%, transparent 30%),
+    radial-gradient(circle at 10% 80%, rgba(255, 140, 0, 0.07) 0%, transparent 35%),
+    radial-gradient(circle at 90% 30%, rgba(255, 165, 0, 0.05) 0%, transparent 25%);
+}
+
+/* Glass effect enhancement class for all components */
+.glass-enhanced {
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  background: rgba(40, 40, 40, 0.4);
+  border: 1px solid rgba(255, 165, 0, 0.4);
+  box-shadow: 
+    0 15px 35px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 165, 0, 0.2);
+}
+
+/* Responsive glass effects */
+@media (max-width: 768px) {
+  body::before {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+  
+  body::after {
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+}
+
+@media (min-width: 1200px) {
+  body::before {
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+  }
+  
+  body::after {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+}
+
+/* Premium Glass Container for Components */
+.glass-premium {
+  backdrop-filter: blur(35px) saturate(200%);
+  -webkit-backdrop-filter: blur(35px) saturate(200%);
+  background: rgba(35, 35, 35, 0.4);
+  border: 1px solid rgba(255, 165, 0, 0.4);
+  border-radius: 20px;
+  box-shadow: 
+    0 25px 50px rgba(0, 0, 0, 0.4),
+    inset 0 2px 0 rgba(255, 165, 0, 0.15),
+    inset 0 -1px 0 rgba(255, 140, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  transform: translateZ(0);
+  will-change: transform;
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.glass-premium::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 30% 30%, rgba(255, 165, 0, 0.05) 0%, transparent 50%),
+    repeating-conic-gradient(
+      from 0deg at 50% 50%,
+      transparent 0deg,
+      rgba(255, 165, 0, 0.02) 2deg,
+      transparent 4deg
+    );
+  pointer-events: none;
+  z-index: 1;
+}
+
+.glass-premium:hover {
+  background: rgba(35, 35, 35, 0.5);
+  border-color: rgba(255, 165, 0, 0.6);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 
+    0 35px 70px rgba(0, 0, 0, 0.5),
+    inset 0 2px 0 rgba(255, 165, 0, 0.2);
+}
+
+/* Glass Navigation Elements */
+.glass-nav {
+  backdrop-filter: blur(25px);
+  -webkit-backdrop-filter: blur(25px);
+  background: rgba(30, 30, 30, 0.6);
+  border: 1px solid rgba(255, 165, 0, 0.3);
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+}
+
+.glass-nav:hover {
+  background: rgba(40, 40, 40, 0.7);
+  border-color: rgba(255, 165, 0, 0.5);
+  transform: translateY(-1px);
+}
+
+/* Performance optimizations for all glass elements */
+.glass-premium *, .glass-enhanced *, .glass-nav * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Animation performance boost */
+@media (prefers-reduced-motion: no-preference) {
+  .glass-premium, .glass-enhanced, .glass-nav {
+    animation: subtleFloat 6s ease-in-out infinite;
+  }
+}
+
+@keyframes subtleFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-2px); }
+}
+
+/* Velaga-inspired Typography */
+.velaga-logo {
+  font-family: "Orbitron", "Montserrat", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.velaga-nav {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+.velaga-button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+/* Velaga-style headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+/* Velaga-style paragraphs and body text */
+p, span, div, li {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+/* Velaga-style Material Design overrides */
+.mat-mdc-button, .mat-mdc-raised-button, .mat-mdc-outlined-button {
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.03em !important;
+  text-transform: uppercase !important;
+}
+
+.mat-mdc-form-field {
+  font-family: "Montserrat", sans-serif !important;
+}
+
+.mat-mdc-form-field .mat-mdc-form-field-label {
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 500 !important;
+}
+
+/* Custom Material Theme Colors */
+:root {
+  --mdc-theme-primary: #ff8c00;
+  --mdc-theme-secondary: #ffa500;
+  --mdc-theme-surface: rgba(40, 40, 40, 0.7);
+  --mdc-theme-background: rgba(26, 26, 26, 0.6);
+}
+
+/* Material Design Component Overrides */
+.mat-mdc-button.mat-primary {
+  --mdc-text-button-label-text-color: #ff8c00 !important;
+  --mdc-outlined-button-outline-color: #ff8c00 !important;
+}
+
+.mat-mdc-button.mat-accent {
+  --mdc-text-button-label-text-color: #ffa500 !important;
+}
+
+.mat-mdc-raised-button.mat-primary {
+  --mdc-filled-button-container-color: #ff8c00 !important;
+  --mdc-filled-button-label-text-color: #1a1a1a !important;
+}
+
+.mat-mdc-raised-button.mat-accent {
+  --mdc-filled-button-container-color: #ffa500 !important;
+  --mdc-filled-button-label-text-color: #1a1a1a !important;
+}
+
+.mat-mdc-icon-button {
+  --mdc-icon-button-icon-color: #ffa500 !important;
+}
+
+/* Material Icons Color Override */
+.mat-icon {
+  color: #ffa500 !important;
+}
+
+/* Form Field Overrides */
+.mat-mdc-form-field {
+  --mdc-filled-text-field-caret-color: #ff8c00 !important;
+  --mdc-filled-text-field-focus-active-indicator-color: #ff8c00 !important;
+  --mdc-filled-text-field-focus-label-text-color: #ff8c00 !important;
+  --mdc-filled-text-field-label-text-color: #ffa500 !important;
+  --mdc-filled-text-field-input-text-color: #ffa500 !important;
+  --mdc-filled-text-field-container-color: rgba(40, 40, 40, 0.6) !important;
+  --mdc-filled-text-field-active-indicator-color: rgba(255, 165, 0, 0.5) !important;
+}
+
+/* Additional Material Component Overrides */
+.mat-mdc-button:not(:disabled) {
+  color: #ffa500 !important;
+}
+
+.mat-mdc-button.mat-mdc-button-base.mat-primary:not(.mat-mdc-raised-button) {
+  color: #ff8c00 !important;
+}
+
+.mat-mdc-outlined-button:not(:disabled) {
+  border-color: #ffa500 !important;
+}
+
+/* Override any remaining purple/blue colors */
+.mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
+  color: #ff8c00 !important;
+}
+
+.mat-accent .mat-option.mat-selected:not(.mat-option-disabled) {
+  color: #ffa500 !important;
+}
+
+/* Bootstrap utility classes enhancement */
+.display-4 {
+  font-weight: 700 !important;
+  background: linear-gradient(135deg, #ff8c00 0%, #ffa500 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.lead {
+  font-size: 1.25rem !important;
+  font-weight: 400 !important;
+  color: #ffa500 !important;
+}
+
+/* Global Profile Dropdown Overrides - Black with Orange Hover */
+.mat-mdc-menu-panel.profile-menu-panel {
+  background: rgba(0, 0, 0, 0.95) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
+  border: 1px solid rgba(70, 70, 70, 0.5) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7) !important;
+}
+
+.mat-mdc-menu-panel.profile-menu-panel .mat-mdc-menu-item {
+  color: rgba(255, 255, 255, 0.9) !important;
+  font-size: 0.9rem !important;
+  transition: all 0.3s ease !important;
+}
+
+.mat-mdc-menu-panel.profile-menu-panel .mat-mdc-menu-item:hover {
+  background: rgba(255, 140, 0, 0.15) !important;
+  color: #ffa500 !important;
+}
+
+.mat-mdc-menu-panel.profile-menu-panel .mat-mdc-menu-item:hover span,
+.mat-mdc-menu-panel.profile-menu-panel .mat-mdc-menu-item:hover .bi {
+  color: #ffa500 !important;
+}
+
+.mat-mdc-menu-panel.profile-menu-panel .logout-item:hover {
+  background: rgba(255, 80, 80, 0.15) !important;
+  color: #ff5555 !important;
+}
+
+.mat-mdc-menu-panel.profile-menu-panel .logout-item:hover span,
+.mat-mdc-menu-panel.profile-menu-panel .logout-item:hover .bi {
+  color: #ff5555 !important;
+}
+
+
