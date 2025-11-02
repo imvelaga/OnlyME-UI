@@ -12,11 +12,11 @@ import { Location } from '@angular/common';
   standalone: true,
   imports: [RouterOutlet, Header, Footer, MatButtonModule, MatIconModule, CommonModule],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrl: './app.css',
 })
 export class App implements OnInit {
   showHeader = false; // Start with false since landing page is default
-  showFooter = true;  // Footer should show on most pages
+  showFooter = true; // Footer should show on most pages
 
   constructor(private router: Router, private location: Location) {
     // Subscribe to route changes
@@ -30,7 +30,7 @@ export class App implements OnInit {
   ngOnInit() {
     // Check initial route multiple ways
     this.updateHeaderFooterVisibility();
-    
+
     // Double check after a short delay
     setTimeout(() => {
       this.updateHeaderFooterVisibility();
@@ -40,24 +40,35 @@ export class App implements OnInit {
   private updateHeaderFooterVisibility() {
     const currentPath = this.location.path();
     const routerUrl = this.router.url;
-    
+
     console.log('Location path:', currentPath);
     console.log('Router URL:', routerUrl);
-    
+
     // Remove query parameters to get clean path
     const cleanPath = currentPath.split('?')[0];
     const cleanRouterUrl = routerUrl.split('?')[0];
-    
+
     // Check if we're on the landing page (root route)
-    const isLandingPage = cleanPath === '' || cleanPath === '/' || 
-                         cleanRouterUrl === '' || cleanRouterUrl === '/';
-    
+    const isLandingPage =
+      cleanPath === '' || cleanPath === '/' || cleanRouterUrl === '' || cleanRouterUrl === '/';
+
     // Header: hide on landing page
     this.showHeader = !isLandingPage;
-    
+
     // Footer: show on all pages (including landing page)
     this.showFooter = true;
-    
-    console.log('Clean path:', cleanPath, 'Clean router URL:', cleanRouterUrl, 'Is Landing Page:', isLandingPage, 'Show Header:', this.showHeader, 'Show Footer:', this.showFooter);
+
+    console.log(
+      'Clean path:',
+      cleanPath,
+      'Clean router URL:',
+      cleanRouterUrl,
+      'Is Landing Page:',
+      isLandingPage,
+      'Show Header:',
+      this.showHeader,
+      'Show Footer:',
+      this.showFooter
+    );
   }
 }

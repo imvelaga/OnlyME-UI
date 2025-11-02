@@ -167,7 +167,8 @@
   color: rgba(255, 165, 0, 0.6);
   border-radius: 10px;
   cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease,
+    box-shadow 0.3s ease;
   font-size: 0.8rem;
   font-weight: 500;
   display: flex;
@@ -204,9 +205,7 @@
   background: rgba(255, 165, 0, 0.12);
   color: #ff8c00;
   border: 1px solid rgba(255, 165, 0, 0.3);
-  box-shadow: 
-    0 2px 8px rgba(255, 140, 0, 0.15),
-    inset 0 1px 0 rgba(255, 165, 0, 0.08);
+  box-shadow: 0 2px 8px rgba(255, 140, 0, 0.15), inset 0 1px 0 rgba(255, 165, 0, 0.08);
 }
 
 .toggle-btn.active::before {
@@ -219,7 +218,8 @@
   height: 16px;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-size: 2rem;
   color: #ff8c00;
   margin-bottom: 0.5rem;
@@ -491,7 +491,8 @@ p {
   font-size: 0.8rem;
 }
 
-.signup-link, .forgot-password-link {
+.signup-link,
+.forgot-password-link {
   color: #ffa500;
   text-decoration: none;
   font-weight: 500;
@@ -499,7 +500,8 @@ p {
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
-.signup-link:hover, .forgot-password-link:hover {
+.signup-link:hover,
+.forgot-password-link:hover {
   color: #ff8c00;
   text-decoration: underline;
   text-shadow: 0 0 8px rgba(255, 140, 0, 0.4);
@@ -512,26 +514,28 @@ p {
     gap: 1rem;
     max-width: 500px;
   }
-  
-  .welcome-container, .form-container {
+
+  .welcome-container,
+  .form-container {
     padding: 2rem 1.5rem;
   }
-  
+
   .welcome-title {
     font-size: 2rem;
   }
-  
+
   .large-icon {
     font-size: 60px !important;
     width: 60px !important;
     height: 60px !important;
   }
-  
+
   .quote-text {
     font-size: 1.2rem;
   }
-  
-  .quote-text::before, .quote-text::after {
+
+  .quote-text::before,
+  .quote-text::after {
     font-size: 2.5rem;
   }
 }
@@ -540,36 +544,39 @@ p {
   .login-page {
     padding: 1rem;
   }
-  
-  .welcome-container, .form-container {
+
+  .welcome-container,
+  .form-container {
     padding: 1.5rem 1rem;
   }
-  
+
   .welcome-title {
     font-size: 1.8rem;
   }
-  
+
   .form-title {
     font-size: 1.8rem;
   }
-  
+
   .large-icon {
     font-size: 50px !important;
     width: 50px !important;
     height: 50px !important;
   }
-  
+
   .quote-text {
     font-size: 1.1rem;
   }
-  
-  .quote-text::before, .quote-text::after {
+
+  .quote-text::before,
+  .quote-text::after {
     font-size: 2rem;
     left: -1rem;
     right: -1rem;
   }
-  
-  .quote-subtitle, .form-subtitle {
+
+  .quote-subtitle,
+  .form-subtitle {
     font-size: 0.9rem;
   }
 }
@@ -578,11 +585,11 @@ p {
   .login-split-container {
     max-width: 1200px;
   }
-  
+
   .welcome-title {
     font-size: 3rem;
   }
-  
+
   .large-icon {
     font-size: 100px !important;
     width: 100px !important;

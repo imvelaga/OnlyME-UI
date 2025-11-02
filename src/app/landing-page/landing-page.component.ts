@@ -8,7 +8,7 @@ import { FormsModule } from '@angular/forms';
   standalone: true,
   imports: [MatButtonModule, MatIconModule, FormsModule],
   templateUrl: './landing-page.component.html',
-  styleUrl: './landing-page.component.css'
+  styleUrl: './landing-page.component.css',
 })
 export class LandingPageComponent {
   email: string = '';
@@ -22,10 +22,10 @@ export class LandingPageComponent {
 
   onLogin() {
     if (this.email && this.password) {
-      console.log('Login attempted with:', { 
-        email: this.email, 
-        password: '***', 
-        userType: this.userType 
+      console.log('Login attempted with:', {
+        email: this.email,
+        password: '***',
+        userType: this.userType,
       });
       // Add your login logic here
       alert(`Login as ${this.userType} functionality will be implemented here!`);

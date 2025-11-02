@@ -7,7 +7,6 @@ import { MatIconModule } from '@angular/material/icon';
   standalone: true,
   imports: [MatButtonModule, MatIconModule],
   templateUrl: './home.component.html',
-  styleUrl: './home.component.css'
+  styleUrl: './home.component.css',
 })
-export class HomeComponent {
-}
+export class HomeComponent {}
