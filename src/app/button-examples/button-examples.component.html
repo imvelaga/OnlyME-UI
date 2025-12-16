@@ -1,0 +1,257 @@
+<div class="examples-container">
+  <div class="header-section">
+    <h1 class="text-glow-orange">Reusable Button Components</h1>
+    <p class="text-orange-light">All button variants with theme colors</p>
+  </div>
+
+  <!-- Glass Buttons -->
+  <section class="button-section">
+    <h2 class="text-orange">Glass Buttons (Default)</h2>
+    <div class="button-grid">
+      <div class="button-item">
+        <app-button variant="glass" color="orange" (clicked)="onButtonClick('Glass Orange')">
+          Glass Orange
+        </app-button>
+        <code>variant="glass" color="orange"</code>
+      </div>
+
+      <div class="button-item">
+        <app-button variant="glass" color="red" (clicked)="onButtonClick('Glass Red')">
+          Glass Red
+        </app-button>
+        <code>variant="glass" color="red"</code>
+      </div>
+
+      <div class="button-item">
+        <app-button variant="glass" color="white" (clicked)="onButtonClick('Glass White')">
+          Glass White
+        </app-button>
+        <code>variant="glass" color="white"</code>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solid Buttons -->
+  <section class="button-section">
+    <h2 class="text-orange">Solid Buttons</h2>
+    <div class="button-grid">
+      <div class="button-item">
+        <app-button variant="solid" color="orange" (clicked)="onButtonClick('Solid Orange')">
+          Solid Orange
+        </app-button>
+        <code>variant="solid" color="orange"</code>
+      </div>
+
+      <div class="button-item">
+        <app-button variant="solid" color="red" (clicked)="onButtonClick('Solid Red')">
+          Solid Red
+        </app-button>
+        <code>variant="solid" color="red"</code>
+      </div>
+
+      <div class="button-item">
+        <app-button variant="solid" color="white" (clicked)="onButtonClick('Solid White')">
+          Solid White
+        </app-button>
+        <code>variant="solid" color="white"</code>
+      </div>
+    </div>
+  </section>
+
+  <!-- Outline Buttons -->
+  <section class="button-section">
+    <h2 class="text-orange">Outline Buttons</h2>
+    <div class="button-grid">
+      <div class="button-item">
+        <app-button variant="outline" color="orange" (clicked)="onButtonClick('Outline Orange')">
+          Outline Orange
+        </app-button>
+        <code>variant="outline" color="orange"</code>
+      </div>
+
+      <div class="button-item">
+        <app-button variant="outline" color="red" (clicked)="onButtonClick('Outline Red')">
+          Outline Red
+        </app-button>
+        <code>variant="outline" color="red"</code>
+      </div>
+
+      <div class="button-item">
+        <app-button variant="outline" color="white" (clicked)="onButtonClick('Outline White')">
+          Outline White
+        </app-button>
+        <code>variant="outline" color="white"</code>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ghost Buttons -->
+  <section class="button-section">
+    <h2 class="text-orange">Ghost Buttons</h2>
+    <div class="button-grid">
+      <div class="button-item">
+        <app-button variant="ghost" color="orange" (clicked)="onButtonClick('Ghost Orange')">
+          Ghost Orange
+        </app-button>
+        <code>variant="ghost" color="orange"</code>
+      </div>
+
+      <div class="button-item">
+        <app-button variant="ghost" color="red" (clicked)="onButtonClick('Ghost Red')">
+          Ghost Red
+        </app-button>
+        <code>variant="ghost" color="red"</code>
+      </div>
+
+      <div class="button-item">
+        <app-button variant="ghost" color="white" (clicked)="onButtonClick('Ghost White')">
+          Ghost White
+        </app-button>
+        <code>variant="ghost" color="white"</code>
+      </div>
+    </div>
+  </section>
+
+  <!-- Size Variants -->
+  <section class="button-section">
+    <h2 class="text-orange">Size Variants</h2>
+    <div class="button-grid">
+      <div class="button-item">
+        <app-button variant="solid" size="sm" (clicked)="onButtonClick('Small')">
+          Small Button
+        </app-button>
+        <code>size="sm"</code>
+      </div>
+
+      <div class="button-item">
+        <app-button variant="solid" size="md" (clicked)="onButtonClick('Medium')">
+          Medium Button
+        </app-button>
+        <code>size="md" (default)</code>
+      </div>
+
+      <div class="button-item">
+        <app-button variant="solid" size="lg" (clicked)="onButtonClick('Large')">
+          Large Button
+        </app-button>
+        <code>size="lg"</code>
+      </div>
+    </div>
+  </section>
+
+  <!-- With Icons -->
+  <section class="button-section">
+    <h2 class="text-orange">Buttons with Icons</h2>
+    <div class="button-grid">
+      <div class="button-item">
+        <app-button
+          variant="glass"
+          icon="house"
+          iconPosition="left"
+          (clicked)="onButtonClick('Icon Left')"
+        >
+          Home
+        </app-button>
+        <code>icon="house" iconPosition="left"</code>
+      </div>
+
+      <div class="button-item">
+        <app-button
+          variant="solid"
+          icon="arrow-right"
+          iconPosition="right"
+          (clicked)="onButtonClick('Icon Right')"
+        >
+          Next
+        </app-button>
+        <code>icon="arrow-right" iconPosition="right"</code>
+      </div>
+
+      <div class="button-item">
+        <app-button variant="outline" icon="download" (clicked)="onButtonClick('Download')">
+          Download
+        </app-button>
+        <code>icon="download"</code>
+      </div>
+
+      <div class="button-item">
+        <app-button
+          variant="solid"
+          color="red"
+          icon="box-arrow-right"
+          (clicked)="onButtonClick('Logout')"
+        >
+          Logout
+        </app-button>
+        <code>color="red" icon="box-arrow-right"</code>
+      </div>
+    </div>
+  </section>
+
+  <!-- Disabled State -->
+  <section class="button-section">
+    <h2 class="text-orange">Disabled State</h2>
+    <div class="button-grid">
+      <div class="button-item">
+        <app-button variant="glass" [disabled]="true"> Disabled Glass </app-button>
+        <code>[disabled]="true"</code>
+      </div>
+
+      <div class="button-item">
+        <app-button variant="solid" [disabled]="true"> Disabled Solid </app-button>
+        <code>[disabled]="true"</code>
+      </div>
+
+      <div class="button-item">
+        <app-button variant="outline" [disabled]="true"> Disabled Outline </app-button>
+        <code>[disabled]="true"</code>
+      </div>
+    </div>
+  </section>
+
+  <!-- Full Width -->
+  <section class="button-section">
+    <h2 class="text-orange">Full Width Button</h2>
+    <div class="button-full-width-demo">
+      <app-button
+        variant="solid"
+        [fullWidth]="true"
+        icon="check-circle"
+        (clicked)="onButtonClick('Full Width')"
+      >
+        Full Width Button
+      </app-button>
+      <code>[fullWidth]="true"</code>
+    </div>
+  </section>
+
+  <!-- Code Example -->
+  <section class="code-section">
+    <h2 class="text-orange">Usage Example</h2>
+    <pre class="code-block"><code>&lt;!-- Import in your component --&gt;
+import &#123; ButtonComponent &#125; from './shared/button/button.component';
+
+&#64;Component(&#123;
+  imports: [ButtonComponent],
+  // ...
+&#125;)
+
+&lt;!-- Use in template --&gt;
+&lt;app-button 
+  variant="solid"
+  size="md"
+  color="orange"
+  icon="arrow-right"
+  iconPosition="right"
+  [fullWidth]="false"
+  [disabled]="false"
+  (clicked)="handleClick($event)"&gt;
+  Click Me
+&lt;/app-button&gt;
+
+&lt;!-- Handle click event --&gt;
+handleClick(event: Event) &#123;
+  console.log('Button clicked!');
+&#125;</code></pre>
+  </section>
+</div>

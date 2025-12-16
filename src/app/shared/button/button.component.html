@@ -1,0 +1,10 @@
+<button [type]="type" [class]="getButtonClasses()" [disabled]="disabled" (click)="onClick($event)">
+  <!-- Icon Left -->
+  <i *ngIf="icon && iconPosition === 'left'" [class]="'bi bi-' + icon"></i>
+
+  <!-- Button Content -->
+  <ng-content></ng-content>
+
+  <!-- Icon Right -->
+  <i *ngIf="icon && iconPosition === 'right'" [class]="'bi bi-' + icon"></i>
+</button>

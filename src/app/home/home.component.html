@@ -1,8 +1,30 @@
+<app-notch></app-notch>
+
 <div class="container-header">
-  <div class="header-content">
-    <!-- Add your header content here -->
-    <h2>Container Header</h2>
-    <p>This is the new container-header section above the main content.</p>
+  <div class="post-creator">
+    <textarea 
+      class="post-textarea" 
+      placeholder="What's on your mind?"
+      [(ngModel)]="postContent"
+      rows="3"></textarea>
+    
+    <div class="post-actions">
+      <div class="attachment-buttons">
+        <button mat-icon-button class="attachment-btn" title="Add Photos" (click)="addPhotos()">
+          <mat-icon>add_photo_alternate</mat-icon>
+          <span>Photos</span>
+        </button>
+        <button mat-icon-button class="attachment-btn" title="Add Videos" (click)="addVideos()">
+          <mat-icon>video_library</mat-icon>
+          <span>Videos</span>
+        </button>
+      </div>
+      
+      <button mat-raised-button class="post-button" (click)="sendPost()">
+        <mat-icon>send</mat-icon>
+        Post
+      </button>
+    </div>
   </div>
 </div>
 

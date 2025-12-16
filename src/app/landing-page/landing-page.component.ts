@@ -43,4 +43,9 @@ export class LandingPageComponent {
     console.log('Apple login attempted as:', this.userType);
     alert(`Apple login as ${this.userType} will be implemented here!`);
   }
+
+  loginWithFacebook() {
+    console.log('Facebook login attempted as:', this.userType);
+    alert(`Facebook login as ${this.userType} will be implemented here!`);
+  }
 }

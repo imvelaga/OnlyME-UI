@@ -1,58 +1,25 @@
-<header class="header">
+<header class="left-menu">
   <div class="container">
-    <!-- Hamburger Menu Button (Far Left Corner) -->
-    <button
-      mat-icon-button
-      class="hamburger-menu-btn"
-      (click)="toggleMobileMenu()"
-      [class.active]="isMobileMenuOpen"
-    >
-      <i class="bi" [ngClass]="isMobileMenuOpen ? 'bi-x' : 'bi-list'"></i>
-    </button>
-
     <div class="logo">
-      <h1 class="velaga-logo">OnlyME</h1>
+      <mat-icon class="logo-icon">token</mat-icon>
     </div>
-
-    <!-- Left Side Navigation Menu -->
-    <nav class="navigation" [class.mobile-open]="isMobileMenuOpen">
-      <ul class="nav-links">
-        <li>
-          <a
-            href="#"
-            routerLink="/home"
-            routerLinkActive="active"
-            [routerLinkActiveOptions]="{ exact: true }"
-            (click)="closeMobileMenu()"
-            class="velaga-nav"
-          >
-            <i class="bi bi-house"></i>
-            <span>Home</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
 
     <!-- Right Side Actions -->
     <div class="right-actions">
-      <!-- Search Container -->
-      <div class="new-search-container">
-        <div class="search-box">
-          <input
-            type="text"
-            placeholder="Search..."
-            [(ngModel)]="searchQuery"
-            (keydown)="onSearchKeydown($event)"
-            class="search-input"
-          />
-          <button
-            type="button"
-            (click)="onSearch()"
-            [disabled]="!searchQuery || !searchQuery.trim()"
-            class="search-btn"
-          >
-            <i class="bi bi-search"></i>
-          </button>
+      <!-- Profiles List -->
+      <div class="profiles-list">
+        <div
+          class="profile-item"
+          [class.online]="profile.status === 'online'"
+          [class.away]="profile.status === 'away'"
+          [class.offline]="profile.status === 'offline'"
+          *ngFor="let profile of profiles"
+        >
+          <img [src]="profile.image" [alt]="profile.name" class="profile-avatar" />
+          <span class="status-dot"></span>
+        </div>
+        <div class="more-profiles" *ngIf="hasMoreProfiles" (click)="loadMoreProfiles()">
+          <span>+{{ remainingProfiles }}</span>
         </div>
       </div>
 
@@ -86,7 +53,4 @@
       </div>
     </div>
   </div>
-
-  <!-- Mobile Menu Overlay -->
-  <div class="mobile-overlay" [class.active]="isMobileMenuOpen" (click)="closeMobileMenu()"></div>
 </header>

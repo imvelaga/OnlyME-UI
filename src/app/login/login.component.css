@@ -468,17 +468,17 @@ p {
   background: rgba(66, 133, 244, 0.1);
 }
 
-.apple-btn {
-  color: #ffa500;
+.facebook-btn {
+  color: #1877F2;
 }
 
-.apple-btn:hover {
-  border-color: rgba(255, 165, 0, 0.4);
-  color: #ff8c00;
+.facebook-btn:hover {
+  border-color: rgba(24, 119, 242, 0.4);
+  color: #1877F2;
 }
 
-.apple-btn:hover::before {
-  background: rgba(255, 165, 0, 0.1);
+.facebook-btn:hover::before {
+  background: rgba(24, 119, 242, 0.1);
 }
 
 .login-footer {

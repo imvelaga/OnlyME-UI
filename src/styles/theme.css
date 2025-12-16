@@ -1,0 +1,342 @@
+/* OnlyME UI - Theme Variables & Color Palette */
+/* This theme mimics the exact color scheme from the home screen */
+
+:root {
+  /* Primary Orange Colors */
+  --primary-orange: #ff8c00;
+  --primary-orange-light: #ffa500;
+  --primary-orange-dark: #ff6b00;
+  --primary-orange-hover: #ff7700;
+
+  /* Orange Opacity Variants */
+  --orange-alpha-90: rgba(255, 165, 0, 0.9);
+  --orange-alpha-80: rgba(255, 165, 0, 0.8);
+  --orange-alpha-70: rgba(255, 165, 0, 0.7);
+  --orange-alpha-60: rgba(255, 165, 0, 0.6);
+  --orange-alpha-50: rgba(255, 165, 0, 0.5);
+  --orange-alpha-40: rgba(255, 165, 0, 0.4);
+  --orange-alpha-30: rgba(255, 165, 0, 0.3);
+  --orange-alpha-20: rgba(255, 165, 0, 0.2);
+  --orange-alpha-15: rgba(255, 165, 0, 0.15);
+  --orange-alpha-10: rgba(255, 165, 0, 0.1);
+  --orange-alpha-08: rgba(255, 165, 0, 0.08);
+  --orange-alpha-05: rgba(255, 165, 0, 0.05);
+  --orange-alpha-03: rgba(255, 165, 0, 0.03);
+
+  /* Dark Orange Variants */
+  --dark-orange-alpha-50: rgba(255, 140, 0, 0.5);
+  --dark-orange-alpha-40: rgba(255, 140, 0, 0.4);
+  --dark-orange-alpha-30: rgba(255, 140, 0, 0.3);
+  --dark-orange-alpha-20: rgba(255, 140, 0, 0.2);
+  --dark-orange-alpha-15: rgba(255, 140, 0, 0.15);
+  --dark-orange-alpha-12: rgba(255, 140, 0, 0.12);
+  --dark-orange-alpha-10: rgba(255, 140, 0, 0.1);
+  --dark-orange-alpha-03: rgba(255, 140, 0, 0.03);
+
+  /* Background Colors - Dark Theme */
+  --bg-black: #000000;
+  --bg-dark-primary: #0a0a0a;
+  --bg-dark-secondary: #1a1a1a;
+  --bg-dark-tertiary: #0d1117;
+  --bg-gray-dark: #141414;
+
+  /* Background Opacity Variants */
+  --bg-black-alpha-95: rgba(0, 0, 0, 0.95);
+  --bg-black-alpha-90: rgba(0, 0, 0, 0.9);
+  --bg-black-alpha-80: rgba(0, 0, 0, 0.8);
+  --bg-black-alpha-70: rgba(0, 0, 0, 0.7);
+  --bg-black-alpha-60: rgba(0, 0, 0, 0.6);
+  --bg-black-alpha-50: rgba(0, 0, 0, 0.5);
+  --bg-black-alpha-40: rgba(0, 0, 0, 0.4);
+  --bg-black-alpha-30: rgba(0, 0, 0, 0.3);
+
+  /* Dark Layer Colors */
+  --bg-dark-alpha-50: rgba(10, 10, 10, 0.5);
+  --bg-dark-alpha-40: rgba(10, 10, 10, 0.4);
+  --bg-dark-alpha-30: rgba(10, 10, 10, 0.3);
+
+  --bg-secondary-alpha-50: rgba(26, 26, 26, 0.5);
+  --bg-secondary-alpha-40: rgba(26, 26, 26, 0.4);
+  --bg-secondary-alpha-30: rgba(26, 26, 26, 0.3);
+  --bg-secondary-alpha-20: rgba(26, 26, 26, 0.2);
+
+  --bg-tertiary-alpha-40: rgba(13, 17, 23, 0.4);
+  --bg-tertiary-alpha-30: rgba(13, 17, 23, 0.3);
+
+  --bg-gray-alpha-50: rgba(20, 20, 20, 0.5);
+  --bg-gray-alpha-40: rgba(20, 20, 20, 0.4);
+  --bg-gray-alpha-30: rgba(20, 20, 20, 0.3);
+  --bg-gray-alpha-20: rgba(20, 20, 20, 0.2);
+
+  /* Border Colors */
+  --border-dark: rgba(70, 70, 70, 0.5);
+  --border-dark-40: rgba(70, 70, 70, 0.4);
+  --border-dark-30: rgba(70, 70, 70, 0.3);
+
+  /* Text Colors */
+  --text-white: #ffffff;
+  --text-white-90: rgba(255, 255, 255, 0.9);
+  --text-white-85: rgba(255, 255, 255, 0.85);
+  --text-white-80: rgba(255, 255, 255, 0.8);
+  --text-white-70: rgba(255, 255, 255, 0.7);
+  --text-white-60: rgba(255, 255, 255, 0.6);
+  --text-white-50: rgba(255, 255, 255, 0.5);
+
+  /* Accent Colors */
+  --accent-red: #ff5555;
+  --accent-red-alpha-15: rgba(255, 80, 80, 0.15);
+  --accent-green: #50fa7b;
+  --accent-blue: #8be9fd;
+
+  /* Glassmorphism Effect Values */
+  --glass-blur-light: blur(10px);
+  --glass-blur-medium: blur(20px);
+  --glass-blur-heavy: blur(25px);
+  --glass-blur-ultra: blur(30px);
+
+  /* Shadow Values */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 15px rgba(255, 165, 0, 0.2);
+  --shadow-lg: 0 8px 25px rgba(255, 140, 0, 0.2);
+  --shadow-xl: 0 15px 30px rgba(0, 0, 0, 0.4);
+  --shadow-2xl: 0 20px 40px rgba(0, 0, 0, 0.5);
+  --shadow-inner: inset 0 1px 0 rgba(255, 165, 0, 0.15);
+  --shadow-inner-lg: inset 0 1px 0 rgba(255, 165, 0, 0.2);
+  --shadow-outline: 0 0 0 1px rgba(255, 165, 0, 0.08);
+  --shadow-outline-md: 0 0 0 1px rgba(255, 165, 0, 0.1);
+
+  /* Text Shadow */
+  --text-shadow-sm: 0 0 10px rgba(255, 140, 0, 0.3);
+  --text-shadow-md: 0 0 15px rgba(255, 165, 0, 0.3);
+  --text-shadow-lg: 0 0 20px rgba(255, 140, 0, 0.5);
+  --text-shadow-dark: 0 2px 4px rgba(0, 0, 0, 0.3);
+
+  /* Border Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 24px;
+  --radius-full: 50%;
+
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+
+  /* Z-index Layers */
+  --z-base: 1;
+  --z-dropdown: 10;
+  --z-sticky: 100;
+  --z-fixed: 1000;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+}
+
+/* Theme Utility Classes */
+.bg-glass-dark {
+  background: var(--bg-secondary-alpha-40);
+  backdrop-filter: var(--glass-blur-heavy);
+  -webkit-backdrop-filter: var(--glass-blur-heavy);
+}
+
+.bg-glass-darker {
+  background: var(--bg-secondary-alpha-30);
+  backdrop-filter: var(--glass-blur-ultra);
+  -webkit-backdrop-filter: var(--glass-blur-ultra);
+}
+
+.border-orange {
+  border: 1px solid var(--orange-alpha-30);
+}
+
+.border-orange-bright {
+  border: 1px solid var(--orange-alpha-40);
+}
+
+.text-orange {
+  color: var(--primary-orange);
+}
+
+.text-orange-light {
+  color: var(--primary-orange-light);
+}
+
+.hover-orange:hover {
+  background: var(--dark-orange-alpha-15) !important;
+  color: var(--primary-orange-light) !important;
+}
+
+.hover-red:hover {
+  background: var(--accent-red-alpha-15) !important;
+  color: var(--accent-red) !important;
+}
+
+/* Gradient Backgrounds */
+.gradient-orange-radial {
+  background: radial-gradient(circle at 15% 25%, var(--orange-alpha-15) 0%, transparent 40%),
+    radial-gradient(circle at 85% 75%, var(--dark-orange-alpha-12) 0%, transparent 45%);
+}
+
+.gradient-orange-linear {
+  background: linear-gradient(135deg, var(--orange-alpha-08) 0%, transparent 50%),
+    repeating-linear-gradient(90deg, transparent 0px, var(--orange-alpha-03) 1px, transparent 2px);
+}
+
+.gradient-orange-overlay {
+  background: linear-gradient(135deg, var(--orange-alpha-05) 0%, transparent 50%),
+    radial-gradient(circle at top right, var(--dark-orange-alpha-03) 0%, transparent 70%);
+}
+
+.gradient-dark-overlay {
+  background: linear-gradient(
+    135deg,
+    var(--bg-dark-alpha-40) 0%,
+    var(--bg-secondary-alpha-30) 25%,
+    var(--bg-tertiary-alpha-40) 75%,
+    var(--bg-black-alpha-50) 100%
+  );
+}
+
+/* Box Shadow Presets */
+.shadow-glass-sm {
+  box-shadow: var(--shadow-xl), var(--shadow-inner), var(--shadow-outline);
+}
+
+.shadow-glass-lg {
+  box-shadow: var(--shadow-2xl), var(--shadow-inner-lg), var(--shadow-outline-md);
+}
+
+/* Animation Classes */
+.transition-all {
+  transition: all var(--transition-normal);
+}
+
+.transition-fast {
+  transition: all var(--transition-fast);
+}
+
+.transition-slow {
+  transition: all var(--transition-slow);
+}
+
+/* Container Presets */
+.container-glass {
+  background: var(--bg-secondary-alpha-40);
+  backdrop-filter: var(--glass-blur-heavy);
+  -webkit-backdrop-filter: var(--glass-blur-heavy);
+  border: 1px solid var(--orange-alpha-30);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-glass-sm);
+  position: relative;
+  overflow: hidden;
+}
+
+.container-glass::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, var(--orange-alpha-05) 0%, transparent 50%),
+    radial-gradient(circle at top right, var(--dark-orange-alpha-03) 0%, transparent 70%);
+  pointer-events: none;
+  border-radius: inherit;
+}
+
+.hero-glass {
+  background: var(--bg-secondary-alpha-30);
+  backdrop-filter: var(--glass-blur-ultra);
+  -webkit-backdrop-filter: var(--glass-blur-ultra);
+  border: 1px solid var(--orange-alpha-40);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-glass-lg);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-glass::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, var(--orange-alpha-08) 0%, transparent 50%),
+    repeating-linear-gradient(90deg, transparent 0px, var(--orange-alpha-03) 1px, transparent 2px);
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+/* Button Presets */
+.btn-glass-orange {
+  background: var(--orange-alpha-10);
+  border: 1px solid var(--orange-alpha-30);
+  color: var(--primary-orange-light);
+  backdrop-filter: var(--glass-blur-light);
+  -webkit-backdrop-filter: var(--glass-blur-light);
+  transition: all var(--transition-normal);
+}
+
+.btn-glass-orange:hover {
+  background: var(--orange-alpha-20);
+  border-color: var(--orange-alpha-50);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-glass-solid {
+  background: var(--primary-orange);
+  color: var(--bg-dark-secondary);
+  border: none;
+  transition: all var(--transition-normal);
+}
+
+.btn-glass-solid:hover {
+  background: var(--orange-alpha-90);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px var(--dark-orange-alpha-40);
+}
+
+/* Typography Presets */
+.text-glow-orange {
+  text-shadow: var(--text-shadow-lg);
+  color: var(--primary-orange);
+}
+
+.text-glow-light {
+  text-shadow: var(--text-shadow-md);
+  color: var(--primary-orange-light);
+}
+
+.text-shadow-dark {
+  text-shadow: var(--text-shadow-dark);
+}
+
+/* Responsive Font Sizes */
+:root {
+  --font-xs: 0.75rem;
+  --font-sm: 0.875rem;
+  --font-base: 1rem;
+  --font-lg: 1.125rem;
+  --font-xl: 1.25rem;
+  --font-2xl: 1.5rem;
+  --font-3xl: 1.875rem;
+  --font-4xl: 2.25rem;
+  --font-5xl: 3rem;
+}
+
+/* Font Family */
+:root {
+  --font-primary: 'Montserrat', 'Helvetica Neue', 'Arial', sans-serif;
+}

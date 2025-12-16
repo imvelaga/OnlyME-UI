@@ -1,15 +1,14 @@
-/* Container Header Styles */
+/* Container Header Styles - Post Creator */
 .container-header {
   background: rgba(26, 26, 26, 0.4);
   backdrop-filter: blur(25px);
   -webkit-backdrop-filter: blur(25px);
   border: 1px solid rgba(255, 165, 0, 0.3);
   border-radius: 20px;
-  margin: 1rem 1rem 0.5rem 1rem;
+  margin: 0 1rem 0.5rem 1rem;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 165, 0, 0.15),
     0 0 0 1px rgba(255, 165, 0, 0.08);
-  padding: 1.5rem;
-  text-align: center;
+  padding: 1rem;
   position: relative;
   overflow: hidden;
 }
@@ -25,6 +24,151 @@
     radial-gradient(circle at top right, rgba(255, 140, 0, 0.03) 0%, transparent 70%);
   pointer-events: none;
   border-radius: inherit;
+}
+
+.post-creator {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.post-textarea {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 165, 0, 0.2);
+  border-radius: 12px;
+  padding: 0.75rem;
+  color: white;
+  font-size: 0.9rem;
+  font-family: 'Velaga', sans-serif;
+  resize: vertical;
+  min-height: 60px;
+  transition: all 0.3s ease;
+}
+
+.post-textarea:focus {
+  outline: none;
+  border-color: rgba(255, 165, 0, 0.4);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 0 2px rgba(255, 140, 0, 0.1);
+}
+
+.post-textarea::placeholder {
+  color: rgba(255, 165, 0, 0.5);
+}
+
+.post-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.attachment-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.attachment-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.5rem !important;
+  flex-direction: row !important;
+  background: rgba(255, 140, 0, 0.1) !important;
+  border: 1px solid rgba(255, 140, 0, 0.2) !important;
+  border-radius: 10px !important;
+  padding: 0.5rem 1rem !important;
+  color: rgba(255, 165, 0, 0.9) !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  height: 36px !important;
+  width: auto !important;
+  min-width: fit-content !important;
+}
+
+.attachment-btn mat-icon {
+  margin: 0 !important;
+  font-size: 1.2rem !important;
+  width: 1.2rem !important;
+  height: 1.2rem !important;
+  display: inline-block !important;
+}
+
+.attachment-btn span {
+  margin: 0 !important;
+  display: inline-block !important;
+  font-size: 0.9rem;
+  font-family: 'Velaga', sans-serif;
+}
+
+.attachment-btn:hover {
+  background: rgba(255, 140, 0, 0.2) !important;
+  border-color: rgba(255, 140, 0, 0.4) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 140, 0, 0.2);
+}
+
+.attachment-btn mat-icon {
+  font-size: 1.2rem;
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.attachment-btn span {
+  font-size: 0.9rem;
+  font-family: 'Velaga', sans-serif;
+}
+
+.post-button {
+  background: linear-gradient(135deg, #ff8c00, #ffa500) !important;
+  color: #fff !important;
+  border: none !important;
+  border-radius: 10px !important;
+  padding: 0.5rem 1.25rem !important;
+  font-size: 0.9rem !important;
+  font-weight: 600;
+  font-family: 'Velaga', sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 12px rgba(255, 140, 0, 0.3) !important;
+  height: 36px !important;
+  line-height: normal !important;
+}
+
+.post-button:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 20px rgba(255, 140, 0, 0.4) !important;
+  background: linear-gradient(135deg, #ffa500, #ff8c00) !important;
+}
+
+.post-button mat-icon {
+  font-size: 1.1rem;
+  width: 1.1rem;
+  height: 1.1rem;
+  color: #fff !important;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+}
+
+@media (max-width: 768px) {
+  .post-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .attachment-buttons {
+    justify-content: center;
+  }
+  
+  .post-button {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 .header-content {
